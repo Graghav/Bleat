@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+	<title>404- Page Not Found</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="description" content="404 Error" />
+
+	<meta name="author" content="Funbox Global" />
+
+<!--Favicon-->
+      <link rel="shortcut icon" href="#">
+
+<!--CSS-->
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+	<link rel="stylesheet" href="css/social.css" type="text/css" media="screen" />
+
+<body>
+<!--Clouds Begin-->
+<div class="scene">
+		<div class="clouds">
+    	 	<div class="cloud-2" data-speed="45000" data-delay="15000"></div>
+    	 	<div class="cloud-3" data-speed="40000"></div>
+      	<div class="cloud-4" data-speed="38000" data-delay="20000"></div>
+	</div>
+<!--Clouds End-->
+
+<!--Error Code-->
+  	<div class="text">
+		<h1 class="error">404</h1>
+
+ <!--Error Info-->
+  	<div class="info">
+		The Page you have requested is not found. Maybe it was lost?
+  	</div>
+  </div>
+
+ <!--Error Info Ends-->
+
+ <!--Sheep Animation-->
+
+  <div class="sheep">
+    <span class="top">
+      <div class="body"></div>
+      <div class="head">
+        <div class="eye one"></div>
+        <div class="eye two"></div>
+        <div class="ear one"></div>
+        <div class="ear two"></div>
+      </div>
+    </span>
+      <div class="legs">
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="leg"></div>
+        <div class="leg"></div>
+    </div>
+  </div>
+</div>
+
+<!--Sheep Thought-->
+<div class="quote">
+<img src="images/quote.png" height=15% width=7.5%>
+	<div class="thought"> 
+		Go <a href="#">Home!</a>
+	</div>
+</div>
+
+<!--Copyright Info-->
+	<div class="copyright">
+		Designed with fun by Funbox
+	</div>
+
+<!-- Social Media Buttons -->
+		<ul class="social" id="css3">
+			<li class="facebook">
+				<a href="http://www.facebook.com/"><strong>Facebook</strong></a>
+			</li>
+			<li class="twitter">
+				<a href="http://twitter.com/"><strong>Twitter</strong></a>
+			</li>
+			<li class="gplus">
+				<a href="http://www.plus.google.com/"><strong>Google+</strong></a>
+			</li>
+		<li class="email">
+				<a href="mailto:"><strong>Email</strong></a>
+			</li>
+			<li class="rss">
+			<a href="#"><strong>RSS</strong></a>
+			</li>
+		</ul>
+
+<!-- Social Media Button Ends -->
+
+<!-- JavaScripts Included-->
+<script src="js/jquery.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script>
+function moveClouds(e, s, d) {
+    $(e).css('right', '-20%');
+        var wait = window.setTimeout(function(){
+            $(e).animate ({
+                right: '120%'
+            }, s, 'linear', function() {
+            moveClouds(e, s, d);
+        });
+    },d);
+}
+
+if(!Modernizr.cssanimations) {
+    var clouds = [1,2,3,4];
+		    
+    $.each(clouds, function() {
+        var e = $('.cloud-' + this);
+        moveClouds(e, e.data('speed'), e.data('delay'));
+    });
+}</script></body>
+</html>
